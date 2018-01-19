@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+	    
+		//code
+		
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt(); int arr[] =new int[n];
+		
+		for(int i=0;i<n;i++)
+		{
+		   int input=s.nextInt();
+		   arr[i]=height(input);
+		}
+		for(int i=0;i<n;i++)
+		{
+		    System.out.println(arr[i]);
+		}
+		
+		
+	}
+	public static int height(int input)
+	{
+	    int sum=0;
+	    int n=0;
+	    while(sum<=input)
+	    {
+	        n++;
+	       sum=((n*(1+n))/2);
+	    } 
+	    if(sum==input)
+	    {
+	        return n;
+	    }
+	    else
+	    {
+	        return n-1;
+	    }
+	}
+}
